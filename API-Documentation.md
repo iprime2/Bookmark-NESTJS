@@ -1,6 +1,6 @@
 # API Documentation
 
-## Auth Controller
+## Auth
 
 ### Signup
 - Endpoint: /auth/signup
