@@ -96,22 +96,6 @@ This will create a local copy of the GitHub repository on your machine, which yo
     #OR Using PNPM
     pnpm run start:dev
 
-### Start the Development Server
-
-   To start the development server, run the following command:
-
-    #Using NPM 
-    npm db:dev:restart
-      
-    #OR Using PNPM
-    pnpm db:dev:restart
-
-    #Using NPM 
-    npm run start:dev
-      
-    #OR Using PNPM
-    pnpm run start:dev
-
 ### Perform end to end test for application
 
   **Create .env.test File:**
@@ -121,6 +105,7 @@ This will create a local copy of the GitHub repository on your machine, which yo
    ```bash
    DATABASE_URL= db url
    JWT_SECRET= jwt secret
+   ```
 
    To start the end to end test, run the following command:
 
