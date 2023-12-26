@@ -6,16 +6,20 @@ This repository contains a CRUD (Create, Read, Update, Delete) application built
 
 List the available APIs and their endpoints:
 
-- GET /users Retrieves all users.
-- POST /users/signup Creates a new user.
-- POST /users/signin Authenticates a user.
-- PATCH /users/:id Updates a user's information.
-- PATCH /users/changepassword/:id Changes a user's password.
-- GET /users/:id Retrieves a specific user by ID.
-- DELETE /users/:id Deletes a specific user by ID.
-- DELETE /users Deletes all users.
-
+- Signup: POST /auth/signup - Create a new user account.
+- Signin: POST /auth/signin - Authenticate a user and generate an access token.
+- Edit User: PATCH /users - Edit user information.
+- Get Me: GET /users/me - Get the currently authenticated user.
+- Edit User: PATCH /users - Edit user information.
+- Get Bookmarks: GET /bookmarks - Get all bookmarks for a user.
+- Get Bookmark by ID: GET /bookmarks/:id - Get a bookmark by its ID.
+- Create Bookmark: POST /bookmarks - Create a new bookmark.
+- Edit Bookmark by ID: PATCH /bookmarks/:id - Edit a bookmark by its ID.
+- Delete Bookmark by ID: DELETE /bookmarks/:id - Delete a bookmark by its ID.
+  
 For each API, provide the required data to send in the request body or as parameters.
+Please note that these are just the endpoint paths, and the full URLs will depend on the server hosting the application.
+For detailed information click here [API'S Documentation](API-Documentation.md).
 
 ## Getting Started
 
