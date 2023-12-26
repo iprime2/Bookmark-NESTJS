@@ -1,73 +1,139 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# NestJS Bookmark Application with PrismaORM, PostgreSQL, Docker, JWT, Passport, and Class Validator
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This repository contains a CRUD (Create, Read, Update, Delete) application built using NestJS framework. It utilizes PrismaORM as the database toolkit, PostgreSQL as the database engine, Docker for containerization, JWT for authorization, Passport for authentication, and the Class Validator library for user input validation.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## API'S Endpoints
 
-## Description
+List the available APIs and their endpoints:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- GET /users Retrieves all users.
+- POST /users/signup Creates a new user.
+- POST /users/signin Authenticates a user.
+- PATCH /users/:id Updates a user's information.
+- PATCH /users/changepassword/:id Changes a user's password.
+- GET /users/:id Retrieves a specific user by ID.
+- DELETE /users/:id Deletes a specific user by ID.
+- DELETE /users Deletes all users.
 
-## Installation
+For each API, provide the required data to send in the request body or as parameters.
 
-```bash
-$ pnpm install
-```
+## Getting Started
 
-## Running the app
+### Prerequisites
 
-```bash
-# development
-$ pnpm run start
+Before you start, make sure you have the following installed on your system:
 
-# watch mode
-$ pnpm run start:dev
+- [Node.js](https://nodejs.org/en/download/): A JavaScript runtime for running the Next.js application.
+- [Docker](https://nodejs.org/en/download/): A Docker to containerize the Postgres DB.
+- [Postman](https://nodejs.org/en/download/): A Postman to test Apis.
+- [PNPM](https://pnpm.io/): A package manager (optional) for installing project dependencies.
+- [Visual Studio Code (VSCode)](https://code.visualstudio.com/download) or your preferred Integrated Development Environment (IDE): A code editor with extensions that enhance your development experience.
 
-# production mode
-$ pnpm run start:prod
-```
+### Installation
 
-## Test
+1. **Install Node.js:**
 
-```bash
-# unit tests
-$ pnpm run test
+   If you haven't already, download and install Node.js from the [official website](https://nodejs.org/en/download/) for your Windows operating system.
 
-# e2e tests
-$ pnpm run test:e2e
+2. **Install PNPM (Optional):**
 
-# test coverage
-$ pnpm run test:cov
-```
+   While not required, you can install PNPM for managing project dependencies. To install PNPM globally, run:
 
-## Support
+   ```bash
+   npm install -g pnpm
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+3. **Install Visual Studio Code (VSCode) or Your Preferred IDE:**
 
-## Stay in touch
+   Download and install Visual Studio Code from the official website or your preferred Integrated Development Environment (IDE). Ensure you have the necessary extensions and plugins installed for a seamless development experience.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+4. **Create Folder and Open with VSCode:**
 
-## License
+   - Create a new folder named "queue-management" on your desktop or any preferred location.
+   - Open the "queue-management" folder using your Visual Studio Code (VSCode) or your preferred IDE.
 
-Nest is [MIT licensed](LICENSE).
+5. **Pull Git Repository from GitHub:**
+
+   To clone a Git repository from GitHub to your local machine, run the following command (replace <repository_url> with the actual repository URL):
+
+   ```bash
+   git clone https://github.com/iprime2/queue-system.git
+
+
+This will create a local copy of the GitHub repository on your machine, which you can then work with.
+
+6. **Install Project Dependencies:**
+
+   Navigate to the project directory and run the following command to install project dependencies using npm or pnpm:
+
+   ```bash
+   # Using NPM (Node Package Manager)
+   npm install
+
+   # OR Using PNPM (Package Manager)
+   pnpm install
+
+7. **Create .env File:**
+
+   Create a .env file in the project root and define your environment variables. Example:
+
+   ```bash
+   DATABASE_URL= db url
+   JWT_SECRET= jwt secret
+
+### Start the Development Server
+
+   To start the development server, run the following command:
+
+    #Using NPM 
+    npm db:dev:restart
+      
+    #OR Using PNPM
+    pnpm db:dev:restart
+
+    #Using NPM 
+    npm run start:dev
+      
+    #OR Using PNPM
+    pnpm run start:dev
+
+### Start the Development Server
+
+   To start the development server, run the following command:
+
+    #Using NPM 
+    npm db:dev:restart
+      
+    #OR Using PNPM
+    pnpm db:dev:restart
+
+    #Using NPM 
+    npm run start:dev
+      
+    #OR Using PNPM
+    pnpm run start:dev
+
+### Perform end to end test for application
+
+  **Create .env.test File:**
+
+   Create a .env file in the project root and define your environment variables. Example:
+
+   ```bash
+   DATABASE_URL= db url
+   JWT_SECRET= jwt secret
+
+   To start the end to end test, run the following command:
+
+    #Using NPM 
+    npm db:test:restart
+      
+    #OR Using PNPM
+    pnpm db:test:restart
+
+    #Using NPM 
+    npm test:e2e
+      
+    #OR Using PNPM
+    pnpm test:e2e
+
+The application should now be accessible in your browser at http://localhost:3000.
