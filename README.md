@@ -121,4 +121,4 @@ This will create a local copy of the GitHub repository on your machine, which yo
     #OR Using PNPM
     pnpm test:e2e
 
-The application should now be accessible in your browser at http://localhost:3000.
+The application should now be accessible in your browser at http://localhost:3333.
